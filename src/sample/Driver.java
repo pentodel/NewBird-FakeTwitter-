@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.TreeItem;
 import javafx.stage.Stage;
 
 public class Driver extends Application {
@@ -11,8 +12,10 @@ public class Driver extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 300, 275));
+        primaryStage.setTitle("NewBird - Admin Panel");
+        primaryStage.setScene(new Scene(root, 600, 400));
+
+
         primaryStage.show();
     }
 
