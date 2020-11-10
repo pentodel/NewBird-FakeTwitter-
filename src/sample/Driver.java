@@ -17,7 +17,7 @@ public class Driver extends Application {
         TreeView treeView = new TreeView();
         for (UserInterface user : treeRoot) {
             if (user instanceof User) {
-                
+
             }
         }
 
