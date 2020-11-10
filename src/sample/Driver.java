@@ -1,19 +1,35 @@
 package sample;
 
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TreeItem;
+import javafx.scene.control.TreeView;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+
+import java.util.ArrayList;
 
 public class Driver extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        ArrayList<UserInterface> treeRoot = new ArrayList<UserInterface>();
+        TreeView treeView = new TreeView();
+        for (UserInterface user : treeRoot) {
+            if (user instanceof User) {
+                
+            }
+        }
+
+        VBox treeMenu = new VBox();
+        VBox rightSize = new VBox();
+
+
+
+        Scene scene = new Scene(treeMenu, 600, 400);
         primaryStage.setTitle("NewBird - Admin Panel");
-        primaryStage.setScene(new Scene(root, 600, 400));
+        primaryStage.setScene(scene);
+
 
 
         primaryStage.show();
