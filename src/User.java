@@ -1,7 +1,4 @@
 // Leaf
-
-package sample;
-
 import java.util.ArrayList;
 
 public class User implements UserInterface {
@@ -10,6 +7,11 @@ public class User implements UserInterface {
     private ArrayList<User> followings;
     private UserGroup group;
     private ArrayList<Tweet> tweets;
+
+    public User(String id, UserGroup group) {
+        this.id = id;
+        this.group = group;
+    }
 
     @Override
     public String getId() {
@@ -25,5 +27,13 @@ public class User implements UserInterface {
         tweets.add(newTweet);
 
         // pretty sure stuff goes here
+    }
+
+    public void followUser(User user) {
+        followings.add(user);
+    }
+
+    public void addFollower(User user) {
+        followers.add(user);
     }
 }

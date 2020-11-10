@@ -1,5 +1,3 @@
-package sample;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -24,6 +22,16 @@ public class Admin {
     private int allWords = 0;
     File file = new File("positive-words.txt");
 
+    private UserGroup rootList = new UserGroup("Root");
+
+    public void createUser(String id, UserGroup group) {
+        // Presumably, group is selected and then passed on into here
+        // Who knows how lol. Not me.
+        User newUser = new User(id, group);
+        group.addChild(newUser);
+        userCount++;
+    }
+
     public void addTweet(String msg, User user) throws FileNotFoundException {
         user.sendTweet(msg);
         messageCount++;
@@ -31,7 +39,10 @@ public class Admin {
         positiveWords += countPosWords(msg);
     }
 
-
+    public void followUser(User follower, User followee) {
+        follower.followUser(followee);
+        followee.addFollower(follower);
+    }
 
 
 
