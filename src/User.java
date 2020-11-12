@@ -16,6 +16,10 @@ public class User extends Subject implements Observer, Visitable {
         userCount++;
     }
 
+    public User() {
+        // for visitor purposes only
+    }
+
     @Override
     public String getId() {
         return id;

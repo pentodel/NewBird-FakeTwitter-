@@ -1,4 +1,5 @@
 
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
 public class Admin {
@@ -31,7 +32,7 @@ public class Admin {
         parent.addChild(newUser);
     }
 
-    public void addTweet(String msg, User user) {
+    public void addTweet(String msg, User user) throws FileNotFoundException {
         user.sendTweet(msg);
     }
 

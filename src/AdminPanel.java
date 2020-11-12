@@ -19,7 +19,6 @@ public class AdminPanel extends JFrame {
     private JButton showMessagesTotalButton;
     private JButton posPercentageButton;
     private JButton showGroupTotalButton;
-    private JLabel DisplayNumber;
 
     public AdminPanel(String title) {
         super(title);
@@ -65,6 +64,46 @@ public class AdminPanel extends JFrame {
                 } else {
                     JOptionPane.showMessageDialog(parent, "A group must be selected to add a new group.");
                 }
+            }
+        });
+
+        showUserTotalButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Visitor v = new UserCountVisitor();
+                User dummyUser = new User();
+                int count = dummyUser.accept(v);
+                JOptionPane.showMessageDialog(parent, "There are " + count + " users.");
+            }
+        });
+
+        showGroupTotalButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Visitor v = new GroupCountVisitor();
+                UserGroup dummyGroup = new UserGroup();
+                int count = dummyGroup.accept(v);
+                JOptionPane.showMessageDialog(parent, "There are " + count + " groups.");
+            }
+        });
+
+        showMessagesTotalButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Visitor v = new TweetCountVisitor();
+                Tweet dummyTweet = new Tweet();
+                int count = dummyTweet.accept(v);
+                JOptionPane.showMessageDialog(parent, "There are " + count + " tweets.");
+            }
+        });
+
+        posPercentageButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Visitor v = new PosPercentVisitor();
+                PosTweets dummyPosTweets = PosTweets.getInstance();
+                int count = dummyPosTweets.accept(v);
+                JOptionPane.showMessageDialog(parent, count + "% of tweets are positive.");
             }
         });
     }
