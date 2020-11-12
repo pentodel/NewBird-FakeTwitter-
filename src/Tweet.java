@@ -11,7 +11,7 @@ public class Tweet implements Visitable {
     private static PosTweets posInst = PosTweets.getInstance();
 
 
-    public Tweet(String content, User poster) throws FileNotFoundException {
+    public Tweet(String content, User poster) {
         this.content = content;
         this.poster = poster;
         messageCount++;

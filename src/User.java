@@ -1,4 +1,5 @@
 // Leaf
+import javax.swing.*;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
@@ -7,7 +8,7 @@ public class User extends Subject implements Observer, Visitable {
     private ArrayList<User> followers = new ArrayList<User>();
     private ArrayList<User> followings = new ArrayList<User>();
     private UserGroup group;
-    private ArrayList<Tweet> tweets;
+    private ArrayList<Tweet> tweets = new ArrayList<Tweet>();
     private ArrayList<Tweet> tweetFeed = new ArrayList<Tweet>();
     private static int userCount = 0;
 
@@ -30,37 +31,49 @@ public class User extends Subject implements Observer, Visitable {
         return userCount;
     }
 
+    public int followerCount() {
+        return followers.size();
+    }
+
+    public int followingCount() {
+        return followings.size();
+    }
+
     public void addToGroup(UserGroup group) {
         this.group = group;
     }
 
-    public void sendTweet(String content) throws FileNotFoundException {
+    public void sendTweet(String content) {
         Tweet newTweet = new Tweet(content, this);
         tweets.add(newTweet);
         pushTweet(newTweet);
     }
 
     public void followUser(User user) {
+        if (followings.contains(user)) {
+            JOptionPane.showMessageDialog(null, "You are already following this user!");
+            return;
+        }
         followings.add(user);
-        attach(user);
         pushFollow(user);
     }
 
     public void addFollower(User user) {
         followers.add(user);
+        attach(user);
     }
 
     public void receiveTweet(Tweet t) {
         tweetFeed.add(t);
     }
 
-    public String followersInText() {
-        if (followers.size() == 0) return "";
+    public String followingsInText() {
+        if (followings.size() == 0) return "";
         String result = "";
-        result += followers.get(0).getId();
-        for (int i = 1; i < followers.size(); i++) {
+        result += followings.get(0).getId();
+        for (int i = 1; i < followings.size(); i++) {
             result += ", ";
-            result += followers.get(i).getId();
+            result += followings.get(i).getId();
         }
         return result;
     }
@@ -69,7 +82,7 @@ public class User extends Subject implements Observer, Visitable {
         if (tweetFeed.size() == 0) return "";
         String result = "";
         for (int i = 0; i < tweetFeed.size(); i++) {
-            result += tweetFeed.get(i).toString();
+            result = tweetFeed.get(i).toString() + result;
         }
         return result;
     }

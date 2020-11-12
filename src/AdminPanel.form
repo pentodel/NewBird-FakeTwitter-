@@ -15,7 +15,7 @@
           </grid>
         </constraints>
         <properties>
-          <text value="New GroupID"/>
+          <text value=""/>
         </properties>
       </component>
       <component id="1d65c" class="javax.swing.JButton" binding="showUserTotalButton">
@@ -77,7 +77,7 @@
           </grid>
         </constraints>
         <properties>
-          <text value="New UserID"/>
+          <text value=""/>
         </properties>
       </component>
       <component id="9b249" class="javax.swing.JButton" binding="openUserViewButton">

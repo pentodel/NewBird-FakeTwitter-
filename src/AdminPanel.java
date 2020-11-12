@@ -39,11 +39,16 @@ public class AdminPanel extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String id = userIdToAddTF.getText();
-                if (id.length() == 0) return;
+                if (id.length() == 0) {
+                    JOptionPane.showMessageDialog(parent, "Please enter a UserID!");
+                    return;
+                }
                 if (tree.getSelectionPath() == null) {
                     JOptionPane.showMessageDialog(parent, "A group must be selected to add a user.");
                     return;
                 }
+
+                userIdToAddTF.setText("");
                 DefaultMutableTreeNode group = (DefaultMutableTreeNode) tree.getSelectionPath().getLastPathComponent();
                 if (group.getUserObject() instanceof UserGroup) {
                     User newUser = instance.createUser(id, (UserGroup) group.getUserObject());
@@ -63,11 +68,16 @@ public class AdminPanel extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String id = groupIdTF.getText();
-                if (id.length() == 0) return;
+                if (id.length() == 0) {
+                    JOptionPane.showMessageDialog(parent, "Please enter a GroupID!");
+                    return;
+                }
                 if (tree.getSelectionPath() == null) {
                     JOptionPane.showMessageDialog(parent, "A group must be selected to add a new group.");
                     return;
                 }
+
+                groupIdTF.setText("");
                 DefaultMutableTreeNode group = (DefaultMutableTreeNode) tree.getSelectionPath().getLastPathComponent();
                 if (group.getUserObject() instanceof UserGroup) {
                     UserGroup newGroup = instance.createGroup(id, (UserGroup) group.getUserObject());

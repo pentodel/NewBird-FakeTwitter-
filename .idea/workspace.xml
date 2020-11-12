@@ -12,12 +12,16 @@
       <change beforePath="$PROJECT_DIR$/out/production/NewBird/AdminPanel$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NewBird/AdminPanel$6.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/NewBird/AdminPanel$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NewBird/AdminPanel$7.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/NewBird/AdminPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NewBird/AdminPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NewBird/Observer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NewBird/Observer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NewBird/PosTweets.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NewBird/PosTweets.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NewBird/Subject.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NewBird/Subject.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NewBird/Tweet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NewBird/Tweet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/NewBird/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NewBird/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/NewBird/UserPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NewBird/UserPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AdminPanel.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdminPanel.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AdminPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdminPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Observer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Observer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Subject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Subject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PosTweets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PosTweets.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Tweet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tweet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UserPage.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserPage.form" afterDir="false" />

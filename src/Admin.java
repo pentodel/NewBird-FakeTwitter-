@@ -47,14 +47,21 @@ public class Admin {
         return newGroup;
     }
 
-    public void addTweet(String msg, User user) throws FileNotFoundException {
+    public void addTweet(String msg, User user) {
         user.sendTweet(msg);
     }
 
     public void followUser(User follower, User followee) {
         follower.followUser(followee);
-        followee.addFollower(follower);
     }
 
+    public User findUser(String id) {
+        for (int i = 0; i < allUsers.size(); i++) {
+            if (allUsers.get(i).getId().equals(id)) {
+                return allUsers.get(i);
+            }
+        }
+        return null;
+    }
 
 }
