@@ -1,16 +1,18 @@
 // Leaf
 import java.util.ArrayList;
 
-public class User extends Subject implements Observer {
+public class User extends Subject implements Observer, Visitable {
     private String id;
     private ArrayList<User> followers;
     private ArrayList<User> followings;
     private UserGroup group;
     private ArrayList<Tweet> tweets;
+    private static int usercount = 0;
 
     public User(String id, UserGroup group) {
         this.id = id;
         this.group = group;
+        usercount++;
     }
 
     @Override
@@ -35,5 +37,10 @@ public class User extends Subject implements Observer {
 
     public void addFollower(User user) {
         followers.add(user);
+    }
+
+    @Override
+    public void accept(Visitor v) {
+
     }
 }

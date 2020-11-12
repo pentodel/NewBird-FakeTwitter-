@@ -1,4 +1,4 @@
-public class UserInterface implements Visitable {
+public class UserInterface {
     String id;
 
     String getId() {
