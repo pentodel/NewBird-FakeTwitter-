@@ -10,15 +10,17 @@
       <change beforePath="$PROJECT_DIR$/out/production/NewBird/AdminPanel$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NewBird/AdminPanel$4.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/NewBird/AdminPanel$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NewBird/AdminPanel$5.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/NewBird/AdminPanel$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NewBird/AdminPanel$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NewBird/AdminPanel$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NewBird/AdminPanel$7.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/NewBird/AdminPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NewBird/AdminPanel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/NewBird/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NewBird/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NewBird/UserGroup.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NewBird/UserGroup.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/NewBird/UserPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NewBird/UserPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AdminPanel.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdminPanel.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AdminPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdminPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Observer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Observer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Subject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Subject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tweet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tweet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UserGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserGroup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UserPage.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserPage.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UserPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserPage.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />

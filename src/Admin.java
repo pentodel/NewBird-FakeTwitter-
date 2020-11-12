@@ -1,4 +1,5 @@
 
+import javax.swing.*;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
@@ -16,10 +17,16 @@ public class Admin {
 
     private UserGroup rootList = new UserGroup("Root");
     private ArrayList<User> allUsers = new ArrayList<User>();
+    private ArrayList<UserGroup> allGroups = new ArrayList<UserGroup>();
 
     public User createUser(String id, UserGroup group) {
-        // Presumably, group is selected and then passed on into here
-        // Who knows how lol. Not me.
+        for (int i = 0; i < allUsers.size(); i++) {
+            if (allUsers.get(i).getId().equals(id)) {
+                JOptionPane.showMessageDialog(null, "User Name already taken.");
+                return null;
+            }
+        }
+
         User newUser = new User(id, group);
         group.addChild(newUser);
         allUsers.add(newUser);
@@ -27,10 +34,16 @@ public class Admin {
     }
 
     public UserGroup createGroup(String id, UserGroup parent) {
-        // Presumably, group is selected and then passed on into here
-        // Who knows how lol. Not me.
+        for (int i = 0; i < allGroups.size(); i++) {
+            if (allGroups.get(i).getId().equals(id)) {
+                JOptionPane.showMessageDialog(null, "Group Name already taken.");
+                return null;
+            }
+        }
+
         UserGroup newGroup = new UserGroup(id, parent);
         parent.addChild(newGroup);
+        allGroups.add(newGroup);
         return newGroup;
     }
 

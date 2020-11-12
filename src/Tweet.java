@@ -22,6 +22,11 @@ public class Tweet implements Visitable {
         // Visitor purposes only.
     }
 
+    @Override
+    public String toString() {
+        return poster.getId() + ":\n" + content + "\n\n";
+    }
+
     public String getContent() {
         return content;
     }

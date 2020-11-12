@@ -47,6 +47,7 @@ public class AdminPanel extends JFrame {
                 DefaultMutableTreeNode group = (DefaultMutableTreeNode) tree.getSelectionPath().getLastPathComponent();
                 if (group.getUserObject() instanceof UserGroup) {
                     User newUser = instance.createUser(id, (UserGroup) group.getUserObject());
+                    if (newUser == null) return;
                     DefaultTreeModel model = (DefaultTreeModel)tree.getModel();
                     DefaultMutableTreeNode root = (DefaultMutableTreeNode)model.getRoot();
                     group.add(new DefaultMutableTreeNode(newUser));
@@ -70,6 +71,7 @@ public class AdminPanel extends JFrame {
                 DefaultMutableTreeNode group = (DefaultMutableTreeNode) tree.getSelectionPath().getLastPathComponent();
                 if (group.getUserObject() instanceof UserGroup) {
                     UserGroup newGroup = instance.createGroup(id, (UserGroup) group.getUserObject());
+                    if (newGroup == null) return;
                     DefaultTreeModel model = (DefaultTreeModel)tree.getModel();
                     DefaultMutableTreeNode root = (DefaultMutableTreeNode)model.getRoot();
                     group.add(new DefaultMutableTreeNode(newGroup));
