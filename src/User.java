@@ -1,4 +1,5 @@
 // Leaf
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
 public class User extends Subject implements Observer, Visitable {
@@ -7,12 +8,12 @@ public class User extends Subject implements Observer, Visitable {
     private ArrayList<User> followings;
     private UserGroup group;
     private ArrayList<Tweet> tweets;
-    private static int usercount = 0;
+    private static int userCount = 0;
 
     public User(String id, UserGroup group) {
         this.id = id;
         this.group = group;
-        usercount++;
+        userCount++;
     }
 
     @Override
@@ -20,11 +21,15 @@ public class User extends Subject implements Observer, Visitable {
         return id;
     }
 
+    public int getUserCount() {
+        return userCount;
+    }
+
     public void addToGroup(UserGroup group) {
         this.group = group;
     }
 
-    public void sendTweet(String content) {
+    public void sendTweet(String content) throws FileNotFoundException {
         Tweet newTweet = new Tweet(content, this);
         tweets.add(newTweet);
 
@@ -40,7 +45,7 @@ public class User extends Subject implements Observer, Visitable {
     }
 
     @Override
-    public void accept(Visitor v) {
-
+    public int accept(Visitor v) {
+        return v.getCount(this);
     }
 }

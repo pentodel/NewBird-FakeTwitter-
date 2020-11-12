@@ -1,3 +1,3 @@
 public interface Visitor {
-    public void getCount();
+    public int getCount(Visitable v);
 }
