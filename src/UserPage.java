@@ -45,8 +45,8 @@ public class UserPage extends JFrame {
                     JOptionPane.showMessageDialog(null, "User not found.");
                     return;
                 }
-                instance.followUser(user, u);
-                JOptionPane.showMessageDialog(null, "Followed " + id + "!");
+                boolean worked = instance.followUser(user, u);
+                if (worked) JOptionPane.showMessageDialog(null, "Followed " + id + "!");
                 refresh(user);
             }
         });

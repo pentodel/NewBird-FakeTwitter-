@@ -1,6 +1,5 @@
 // Leaf
 import javax.swing.*;
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
 public class User extends Subject implements Observer, Visitable {
@@ -49,13 +48,14 @@ public class User extends Subject implements Observer, Visitable {
         pushTweet(newTweet);
     }
 
-    public void followUser(User user) {
+    public boolean followUser(User user) {
         if (followings.contains(user)) {
             JOptionPane.showMessageDialog(null, "You are already following this user!");
-            return;
+            return false;
         }
         followings.add(user);
         pushFollow(user);
+        return true;
     }
 
     public void addFollower(User user) {

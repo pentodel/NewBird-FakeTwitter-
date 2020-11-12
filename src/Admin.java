@@ -1,6 +1,5 @@
 
 import javax.swing.*;
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
 public class Admin {
@@ -51,8 +50,8 @@ public class Admin {
         user.sendTweet(msg);
     }
 
-    public void followUser(User follower, User followee) {
-        follower.followUser(followee);
+    public boolean followUser(User follower, User followee) {
+        return follower.followUser(followee);
     }
 
     public User findUser(String id) {
