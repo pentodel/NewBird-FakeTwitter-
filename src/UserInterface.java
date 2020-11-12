@@ -1,3 +1,7 @@
-public interface UserInterface {
-    String getId();
+public class UserInterface implements Visitable {
+    String id;
+
+    String getId() {
+        return id;
+    }
 }

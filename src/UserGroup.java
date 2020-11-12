@@ -2,7 +2,7 @@
 
 import java.util.ArrayList;
 
-public class UserGroup implements UserInterface {
+public class UserGroup extends UserInterface {
     private String id;
     private UserGroup parent;
     private ArrayList<UserInterface> children = new ArrayList<UserInterface>();

@@ -1,7 +1,7 @@
 // Leaf
 import java.util.ArrayList;
 
-public class User implements UserInterface {
+public class User extends Subject implements Observer {
     private String id;
     private ArrayList<User> followers;
     private ArrayList<User> followings;
