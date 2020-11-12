@@ -45,4 +45,9 @@ public class UserGroup extends UserInterface implements Visitable {
     public int accept(Visitor v) {
         return v.getCount(this);
     }
+
+    @Override
+    public String toString() {
+        return id;
+    }
 }

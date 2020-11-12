@@ -1,5 +1,6 @@
 import javax.swing.*;
 import javax.swing.tree.DefaultMutableTreeNode;
+import javax.swing.tree.DefaultTreeModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -7,22 +8,27 @@ public class AdminPanel extends JFrame {
     Admin instance = Admin.getInstance();
 
     private JPanel mainPanel;
-    private JTree treeViewArea;
+    private JTree tree;
     private JButton openUserViewButton;
     private JTextField userIdToAddTF;
     private JTextField groupIdTF;
     private JButton addGroupButton;
     private JButton addUserButton;
-
-    // Visitor for these ?
     private JButton showUserTotalButton;
     private JButton showMessagesTotalButton;
     private JButton posPercentageButton;
     private JButton showGroupTotalButton;
 
+
+
+
     public AdminPanel(String title) {
         super(title);
         final AdminPanel parent = this;
+
+        DefaultMutableTreeNode root = new DefaultMutableTreeNode(new UserGroup("Root"));
+        DefaultTreeModel model = (DefaultTreeModel) tree.getModel();
+        model.setRoot(root);
 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setContentPane(mainPanel);
@@ -34,14 +40,18 @@ public class AdminPanel extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 String id = userIdToAddTF.getText();
                 if (id.length() == 0) return;
-                if (treeViewArea.getSelectionPath() == null) {
+                if (tree.getSelectionPath() == null) {
                     JOptionPane.showMessageDialog(parent, "A group must be selected to add a user.");
                     return;
                 }
-                UserGroup group = (UserGroup) treeViewArea.getSelectionPath().getLastPathComponent();
-                if (false) {
-//                if (group instanceof UserGroup) {
-                      instance.createUser(id, group);
+                DefaultMutableTreeNode group = (DefaultMutableTreeNode) tree.getSelectionPath().getLastPathComponent();
+                if (group.getUserObject() instanceof UserGroup) {
+                    User newUser = instance.createUser(id, (UserGroup) group.getUserObject());
+                    DefaultTreeModel model = (DefaultTreeModel)tree.getModel();
+                    DefaultMutableTreeNode root = (DefaultMutableTreeNode)model.getRoot();
+                    group.add(new DefaultMutableTreeNode(newUser));
+                    model.reload(root);
+                    expandAllNodes(tree, 0, tree.getRowCount());
                 } else {
                     JOptionPane.showMessageDialog(parent, "A group must be selected to add a user.");
                 }
@@ -53,14 +63,18 @@ public class AdminPanel extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 String id = groupIdTF.getText();
                 if (id.length() == 0) return;
-                if (treeViewArea.getSelectionPath() == null) {
+                if (tree.getSelectionPath() == null) {
                     JOptionPane.showMessageDialog(parent, "A group must be selected to add a new group.");
                     return;
                 }
-                UserGroup group = (UserGroup) treeViewArea.getSelectionPath().getLastPathComponent();
-                if (false) {
-//                if (group instanceof UserGroup) {
-                    instance.createUser(id, group);
+                DefaultMutableTreeNode group = (DefaultMutableTreeNode) tree.getSelectionPath().getLastPathComponent();
+                if (group.getUserObject() instanceof UserGroup) {
+                    UserGroup newGroup = instance.createGroup(id, (UserGroup) group.getUserObject());
+                    DefaultTreeModel model = (DefaultTreeModel)tree.getModel();
+                    DefaultMutableTreeNode root = (DefaultMutableTreeNode)model.getRoot();
+                    group.add(new DefaultMutableTreeNode(newGroup));
+                    model.reload(root);
+                    expandAllNodes(tree, 0, tree.getRowCount());
                 } else {
                     JOptionPane.showMessageDialog(parent, "A group must be selected to add a new group.");
                 }
@@ -106,6 +120,32 @@ public class AdminPanel extends JFrame {
                 JOptionPane.showMessageDialog(parent, count + "% of tweets are positive.");
             }
         });
+        openUserViewButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (tree.getSelectionPath() == null) {
+                    JOptionPane.showMessageDialog(parent, "A user has not been selected.");
+                    return;
+                }
+                DefaultMutableTreeNode user = (DefaultMutableTreeNode) tree.getSelectionPath().getLastPathComponent();
+                if (user.getUserObject() instanceof User) {
+                    JFrame frame = new UserPage((User) user.getUserObject());
+                    frame.setVisible(true);
+                } else {
+                    JOptionPane.showMessageDialog(parent, "You have selected a group. Please select a user.");
+                }
+            }
+        });
+    }
+
+    private void expandAllNodes(JTree tree, int startingIndex, int rowCount){
+        for(int i=startingIndex;i<rowCount;++i){
+            tree.expandRow(i);
+        }
+
+        if(tree.getRowCount()!=rowCount){
+            expandAllNodes(tree, rowCount, tree.getRowCount());
+        }
     }
 
     public static void main(String[] args) {

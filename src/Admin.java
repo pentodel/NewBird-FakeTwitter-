@@ -17,19 +17,21 @@ public class Admin {
     private UserGroup rootList = new UserGroup("Root");
     private ArrayList<User> allUsers = new ArrayList<User>();
 
-    public void createUser(String id, UserGroup group) {
+    public User createUser(String id, UserGroup group) {
         // Presumably, group is selected and then passed on into here
         // Who knows how lol. Not me.
         User newUser = new User(id, group);
         group.addChild(newUser);
         allUsers.add(newUser);
+        return newUser;
     }
 
-    public void createGroup(String id, UserGroup parent) {
+    public UserGroup createGroup(String id, UserGroup parent) {
         // Presumably, group is selected and then passed on into here
         // Who knows how lol. Not me.
-        User newUser = new User(id, parent);
-        parent.addChild(newUser);
+        UserGroup newGroup = new UserGroup(id, parent);
+        parent.addChild(newGroup);
+        return newGroup;
     }
 
     public void addTweet(String msg, User user) throws FileNotFoundException {

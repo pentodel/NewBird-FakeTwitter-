@@ -11,17 +11,12 @@ public class UserPage extends JFrame {
     private JTextArea feedTA;
     private JTextArea FollowingListTA;
 
-    public UserPage(String title) {
-        super(title);
+    public UserPage(User user) {
+        super(user.getId());
 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setContentPane(mainPanel);
         this.pack();
         this.setSize(800,600);
-    }
-
-    public void run(String userid) {
-        JFrame frame = new AdminPanel("userid");
-        frame.setVisible(true);
     }
 }

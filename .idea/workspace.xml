@@ -6,29 +6,20 @@
       <change beforePath="$PROJECT_DIR$/out/production/NewBird/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NewBird/Admin.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/NewBird/AdminPanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NewBird/AdminPanel$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/NewBird/AdminPanel$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NewBird/AdminPanel$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NewBird/AdminPanel$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NewBird/AdminPanel$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NewBird/AdminPanel$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NewBird/AdminPanel$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NewBird/AdminPanel$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NewBird/AdminPanel$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NewBird/AdminPanel$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NewBird/AdminPanel$6.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/NewBird/AdminPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NewBird/AdminPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NewBird/GroupCountVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NewBird/GroupCountVisitor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NewBird/PosPercentVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NewBird/PosPercentVisitor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NewBird/Tweet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NewBird/Tweet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NewBird/TweetCountVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NewBird/TweetCountVisitor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/NewBird/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NewBird/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NewBird/UserCountVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NewBird/UserCountVisitor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/NewBird/UserGroup.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NewBird/UserGroup.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NewBird/UserInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NewBird/UserInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NewBird/Visitable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NewBird/Visitable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NewBird/Visitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NewBird/Visitor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NewBird/UserPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NewBird/UserPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AdminPanel.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdminPanel.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AdminPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdminPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GroupCountVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GroupCountVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PosPercentVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PosPercentVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PosWords.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PosTweets.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tweet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tweet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TweetCountVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TweetCountVisitor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UserGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserGroup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Visitable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Visitable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Visitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Visitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UserPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserPage.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -121,6 +112,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
