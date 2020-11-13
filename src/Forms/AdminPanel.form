@@ -25,7 +25,7 @@
           </grid>
         </constraints>
         <properties>
-          <text value="Show Users.User Total"/>
+          <text value="Show User Total"/>
         </properties>
       </component>
       <component id="ac3d7" class="javax.swing.JButton" binding="showMessagesTotalButton">
