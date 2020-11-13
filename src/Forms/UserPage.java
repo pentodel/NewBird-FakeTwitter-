@@ -46,7 +46,7 @@ public class UserPage extends JFrame {
                 userToFollowTF.setText("");
                 User u = instance.findUser(id);
                 if (u == null) {
-                    JOptionPane.showMessageDialog(null, "Users.User not found.");
+                    JOptionPane.showMessageDialog(null, "User not found.");
                     return;
                 }
                 boolean worked = instance.followUser(user, u);

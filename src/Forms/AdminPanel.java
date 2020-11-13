@@ -168,7 +168,7 @@ public class AdminPanel extends JFrame {
     }
 
     public static void main(String[] args) {
-        JFrame frame = new AdminPanel("Admin.Admin Panel");
+        JFrame frame = new AdminPanel("Admin Panel");
         frame.setVisible(true);
     }
 }

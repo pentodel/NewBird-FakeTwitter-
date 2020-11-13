@@ -3,56 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NewBird/Admin.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NewBird/AdminPanel$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NewBird/AdminPanel$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NewBird/AdminPanel$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NewBird/AdminPanel$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NewBird/AdminPanel$5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NewBird/AdminPanel$6.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NewBird/AdminPanel$7.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NewBird/AdminPanel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NewBird/Controller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NewBird/GroupCountVisitor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NewBird/Observer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NewBird/PosPercentVisitor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NewBird/PosTweets.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NewBird/README" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NewBird/README" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NewBird/Subject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NewBird/Tweet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NewBird/TweetCountVisitor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NewBird/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NewBird/UserCountVisitor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NewBird/UserGroup.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NewBird/UserInterface.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NewBird/UserPage$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NewBird/UserPage$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NewBird/UserPage$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NewBird/UserPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NewBird/Visitable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NewBird/Visitor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NewBird/positive-words.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AdminPanel.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Forms/AdminPanel.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AdminPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Forms/AdminPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GroupCountVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Visitor/GroupCountVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Observer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Users/Observer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PosPercentVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Visitor/PosPercentVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PosTweets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tweets/PosTweets.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/README" beforeDir="false" afterPath="$PROJECT_DIR$/src/README" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Subject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Users/Subject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tweet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tweets/Tweet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TweetCountVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Visitor/TweetCountVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Users/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UserCountVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Visitor/UserCountVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UserGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Users/UserGroup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Users/UserInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UserPage.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Forms/UserPage.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UserPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Forms/UserPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Visitable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Users/Visitable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Visitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Visitor/Visitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/positive-words.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Forms/AdminPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Forms/AdminPanel.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
