@@ -21,9 +21,13 @@ public class Admin {
     private ArrayList<UserGroup> allGroups = new ArrayList<UserGroup>();
 
     public User createUser(String id, UserGroup group) {
+        if (id.contains(" ")) {
+            JOptionPane.showMessageDialog(null, "User Name cannot contain a space.");
+            return null;
+        }
         for (int i = 0; i < allUsers.size(); i++) {
             if (allUsers.get(i).getId().equals(id)) {
-                JOptionPane.showMessageDialog(null, "Users.User Name already taken.");
+                JOptionPane.showMessageDialog(null, "User Name already taken.");
                 return null;
             }
         }
@@ -63,6 +67,43 @@ public class Admin {
             }
         }
         return null;
+    }
+
+    public ArrayList<User> findUsersWithLatestActivity() {
+        ArrayList<User> results = new ArrayList<User>();
+        long latestUpdate = 0;
+
+        for (User user : allUsers) {
+            if (user.getLastUpdateTime() > latestUpdate) {
+                latestUpdate = user.getLastUpdateTime();
+            }
+        }
+        for (User user : allUsers) {
+            if (user.getLastUpdateTime() == latestUpdate) {
+                results.add(user);
+            }
+        }
+
+        return results;
+    }
+
+    public ArrayList<User> findUsersWithLatestPosts() {
+        ArrayList<User> results = new ArrayList<User>();
+        long latestPost = 0;
+
+        for (User user : allUsers) {
+            if (user.getLastPostTime() > latestPost) {
+                latestPost = user.getLastPostTime();
+            }
+        }
+        if (latestPost == 0) return results;
+        for (User user : allUsers) {
+            if (user.getLastPostTime() == latestPost) {
+                results.add(user);
+            }
+        }
+
+        return results;
     }
 
 }

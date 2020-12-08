@@ -6,6 +6,8 @@ import Users.User;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 // Users.Observer pattern here??
 
@@ -22,6 +24,9 @@ public class UserPage extends JFrame {
     private JButton refreshButton;
     private JLabel followingLabel;
     private JLabel followersLabel;
+    private JLabel creationLabel;
+    private JLabel lastPostedLabel;
+    private JLabel lastActiveLabel;
 
     public UserPage(final User user) {
         super(user.getId());
@@ -31,9 +36,25 @@ public class UserPage extends JFrame {
         this.pack();
         this.setSize(500,500);
 
+        feedTA.setWrapStyleWord(true);
+        feedTA.setLineWrap(true);
+
+        followingListTA.setWrapStyleWord(true);
+        followingListTA.setLineWrap(true);
+
         feedTA.setText(user.tweetFeedInText());
         followingListTA.setText(user.followingsInText());
 
+        SimpleDateFormat sdf = new SimpleDateFormat("MMM dd, yyyy HH:mm");
+        long creationTime = user.getCreationTime();
+        Date resultDate = new Date(creationTime);
+        creationLabel.setText("User Since: " + sdf.format(resultDate));
+
+        SimpleDateFormat sdf2 = new SimpleDateFormat("MMM dd, yyyy HH:mm:ss");
+        user.updateLastUpdateTime();
+        long lastUpdateTime = user.getLastUpdateTime();
+        Date updateDate = new Date(lastUpdateTime);
+        lastActiveLabel.setText("Last Active: " + sdf2.format(updateDate));
 
         followUserButton.addActionListener(new ActionListener() {
             @Override
@@ -83,10 +104,21 @@ public class UserPage extends JFrame {
     }
 
     public void refresh(User user) {
+        user.updateLastUpdateTime();
+        long lastUpdateTime = user.getLastUpdateTime();
+        long lastPostTime = user.getLastPostTime();
+        SimpleDateFormat sdf = new SimpleDateFormat("MMM dd, yyyy HH:mm:ss");
+        Date updateDate = new Date(lastUpdateTime);
+        Date postDate = new Date(lastPostTime);
+
         feedTA.setText(user.tweetFeedInText());
         followingListTA.setText(user.followingsInText());
         followingLabel.setText("Following: " + user.followingCount());
         followersLabel.setText("Followers: " + user.followerCount());
+        lastActiveLabel.setText("Last Active: " + sdf.format(updateDate));
+        if (lastPostTime != 0) {
+            lastPostedLabel.setText("Last Posted: " + sdf.format(postDate));
+        }
 
     }
 }

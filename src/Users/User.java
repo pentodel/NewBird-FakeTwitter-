@@ -4,10 +4,14 @@ import Tweets.Tweet;
 import Visitor.Visitor;
 
 import javax.swing.*;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 public class User extends Subject implements Observer, Visitable {
     private String id;
+    private long creationTime = System.currentTimeMillis();
+    private long lastPostTime = 0;
+    private long lastUpdateTime = System.currentTimeMillis();
     private ArrayList<User> followers = new ArrayList<User>();
     private ArrayList<User> followings = new ArrayList<User>();
     private UserGroup group;
@@ -34,6 +38,12 @@ public class User extends Subject implements Observer, Visitable {
         return userCount;
     }
 
+    public long getCreationTime() { return creationTime; }
+
+    public long getLastUpdateTime() { return lastUpdateTime; }
+
+    public long getLastPostTime() { return lastPostTime; }
+
     public int followerCount() {
         return followers.size();
     }
@@ -46,10 +56,19 @@ public class User extends Subject implements Observer, Visitable {
         this.group = group;
     }
 
+    public void updateLastUpdateTime() {
+        lastUpdateTime = System.currentTimeMillis();
+    }
+
+    public void updateLastPostTime() {
+        lastPostTime = System.currentTimeMillis();
+    }
+
     public void sendTweet(String content) {
         Tweet newTweet = new Tweet(content, this);
         tweets.add(newTweet);
         pushTweet(newTweet);
+        updateLastPostTime();
     }
 
     public boolean followUser(User user) {
@@ -72,12 +91,18 @@ public class User extends Subject implements Observer, Visitable {
     }
 
     public String followingsInText() {
+        SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy HH:mm");
         if (followings.size() == 0) return "";
         String result = "";
-        result += followings.get(0).getId();
+        result += followings.get(0).getId() + " (Last Post: ";
+        result += (followings.get(0).getLastPostTime() != 0) ? sdf.format(followings.get(0).getLastPostTime()) : "Never";
+        result += ")";
         for (int i = 1; i < followings.size(); i++) {
             result += ", ";
-            result += followings.get(i).getId();
+
+            result += followings.get(i).getId() + " (Last Post: ";
+            result += (followings.get(i).getLastPostTime() != 0) ? sdf.format(followings.get(i).getLastPostTime()) : "Never";
+            result += ")";
         }
         return result;
     }

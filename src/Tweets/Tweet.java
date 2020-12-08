@@ -20,7 +20,7 @@ public class Tweet implements Visitable {
     }
 
     public Tweet() {
-        // Visitor.Visitor purposes only.
+        // Visitor purposes only.
     }
 
     @Override

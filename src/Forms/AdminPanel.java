@@ -9,6 +9,7 @@ import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 
 public class AdminPanel extends JFrame {
@@ -25,8 +26,8 @@ public class AdminPanel extends JFrame {
     private JButton showMessagesTotalButton;
     private JButton posPercentageButton;
     private JButton showGroupTotalButton;
-
-
+    private JButton validateButton;
+    private JButton lastestActivityButton;
 
 
     public AdminPanel(String title) {
@@ -153,6 +154,50 @@ public class AdminPanel extends JFrame {
                 } else {
                     JOptionPane.showMessageDialog(parent, "You have selected a group. Please select a user.");
                 }
+            }
+        });
+        validateButton.addActionListener(new ActionListener() {
+            // Usernames are validated on creation. I have only added this button for visual balance.
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JOptionPane.showMessageDialog(parent, "All usernames are valid.");
+            }
+        });
+        lastestActivityButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ArrayList<User> updatees = instance.findUsersWithLatestActivity();
+                ArrayList<User> postees = instance.findUsersWithLatestPosts();
+                String output = "";
+
+                if (updatees.size() == 0) {
+                    output += "No users have been created.\n";
+                } else if (updatees.size() == 1) {
+                    output += "The last active user is " + updatees.get(0) + ".\n";
+                } else if (updatees.size() == 2) {
+                    output += "The last active users are " + updatees.get(0) + " and " + updatees.get(1) + ".\n";
+                } else {
+                    output += "The last active users are " + updatees.get(0);
+                    for (int i = 1; i < updatees.size() - 1; i++) {
+                        output += ", " + updatees.get(i);
+                    }
+                    output += ", and " + updatees.get(updatees.size() - 1) + ".\n";
+                }
+
+                if (postees.size() == 0) {
+                    output += "No users have posted yet.";
+                } else if (postees.size() == 1) {
+                    output += "The last user to post is " + postees.get(0) + ".";
+                } else if (postees.size() == 2) {
+                    output += "The last users to post are " + postees.get(0) + " and " + postees.get(1) + ".";
+                } else {
+                    output += "The last users to post are " + postees.get(0);
+                    for (int i = 1; i < postees.size() - 1; i++) {
+                        output += ", " + postees.get(i);
+                    }
+                    output += ", and " + postees.get(postees.size() - 1) + ".";
+                }
+                JOptionPane.showMessageDialog(parent, output);
             }
         });
     }
