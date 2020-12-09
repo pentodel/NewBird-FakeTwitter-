@@ -4,9 +4,13 @@ import Users.User;
 import Users.Visitable;
 import Visitor.Visitor;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class Tweet implements Visitable {
     private String content;
     private User poster;
+    private long creationTime = System.currentTimeMillis(); // This was implemented for fun
     private static int messageCount = 0;
     private static int wordCount = 0;
     private static PosTweets posInst = PosTweets.getInstance();
@@ -25,7 +29,10 @@ public class Tweet implements Visitable {
 
     @Override
     public String toString() {
-        return poster.getId() + ":\n" + content + "\n\n";
+        SimpleDateFormat sdf = new SimpleDateFormat("MMM dd, yyyy HH:mm");
+        Date resultDate = new Date(creationTime);
+
+        return poster.getId() + ": (Posted: " + sdf.format(resultDate) + ")\n" + content + "\n\n";
     }
 
     public String getContent() {
@@ -39,6 +46,8 @@ public class Tweet implements Visitable {
     public int getMessageCount() {
         return messageCount;
     }
+
+    public long getCreationTime() { return creationTime; }
 
     @Override
     public int accept(Visitor v) {
