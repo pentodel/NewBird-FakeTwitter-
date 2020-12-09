@@ -157,6 +157,7 @@ public class AdminPanel extends JFrame {
             }
         });
         validateButton.addActionListener(new ActionListener() {
+            // For A3#1
             // Usernames are validated on creation. I have only added this button for visual balance.
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -164,6 +165,11 @@ public class AdminPanel extends JFrame {
             }
         });
         lastestActivityButton.addActionListener(new ActionListener() {
+            // For A3#4
+            // I think realistically it's only possible to have 0 or 1 most recent users since one person controls
+            // all of the accounts
+            // I've still set it up to handle more things just in case, and since I split up update time
+            // I've accounted for both of these values.
             @Override
             public void actionPerformed(ActionEvent e) {
                 ArrayList<User> updatees = instance.findUsersWithLatestActivity();

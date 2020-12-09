@@ -21,6 +21,10 @@ public class Admin {
     private ArrayList<UserGroup> allGroups = new ArrayList<UserGroup>();
 
     public User createUser(String id, UserGroup group) {
+        // For A3#1
+        // I already had ID validation, with the exception of the no-space requirement
+        // So I simply added the no-space requirement
+
         if (id.contains(" ")) {
             JOptionPane.showMessageDialog(null, "User Name cannot contain a space.");
             return null;

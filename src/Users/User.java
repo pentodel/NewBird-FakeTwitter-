@@ -56,6 +56,15 @@ public class User extends Subject implements Observer, Visitable {
         this.group = group;
     }
 
+    // For A3#3
+    // I chose to break the update into update and post time
+    // Update time felt a little...vague, and I couldn't tell what it wanted me to update on the follower end
+    // So I implemented it differently
+    // lastUpdateTime is when activity has come from anywhere in the user's account -- update, follow, post, whatever
+    // lastPostTime is when the user has last made a post
+    // lastUpdateTime is more relevant when displayed on a user's page
+    // lastPostTime is more relevant to a followings/follower list
+
     public void updateLastUpdateTime() {
         lastUpdateTime = System.currentTimeMillis();
     }
